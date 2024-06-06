@@ -1,0 +1,243 @@
+:root {
+    --primary-color: #f4a261; /* Light Orange */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    
+}
+
+.header {
+    position: relative;
+    background: url('../image/img_2.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97.3%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.overlay h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.services-grid, .why-grid, .disrupting-grid, .material-grid, .quality-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-box, .why-box, .disrupting-box, .material-box, .quality-box {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(30% - 20px);
+    max-width: calc(30% - 20px);
+    text-align: center;
+}
+
+.service-box:hover, .why-box:hover, .disrupting-box:hover, .material-box:hover, .quality-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.service-box:hover img {
+    transform: scale(1.1);
+}
+
+.description {
+    margin-top: 10px;
+}
+
+/* .why-box h3, .quality-box h3 {
+    color: var(--primary-color);
+} */
+
+.why-box p, .quality-box p {
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+    transition: opacity 0.5s, transform 0.5s;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.why-box:hover p, .quality-box:hover p {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.disrupting-box, .material-box {
+    font-size: 2em;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.disrupting-box, .material-box {
+    animation: float 3s ease-in-out infinite;
+}
+.why-box {
+    background-color: #f1c19a;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.why-box:hover {
+    background-color: white;
+    border: 1px solid #f4a261;
+}
+.why-box h3 {
+    color: black;
+}
+
+.disrupting-box {
+    background-color: #f1c19a; /* Light Orange */
+    flex: 1 1 calc(45% - 20px);
+    max-width: calc(45% - 20px);
+}
+
+.disrupting-box:nth-child(odd) {
+    margin-right: 20px;
+}
+
+.disrupting-box:nth-child(even) {
+    margin-left: 20px;
+}
+
+.disrupting-box h3 {
+    color: black;
+    font-weight: bold;
+}
+
+.disrupting-box p {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #333;
+}
+
+.disrupting-box p::first-line {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.disrupting-box p::first-line span {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #333;
+}
+.text-container {
+  display: inline-block;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+
+.text-center {
+  text-align: center;
+  transition: transform 0.5s ease;
+  transform: translateX(-50%);
+}
+
+.text-container:hover {
+  width: 200%;
+}
+
+.text-container:hover .text-center {
+  transform: translateX(0);
+}
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-box {
+  position: relative;
+  width: calc(33.333% - 20px);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-box img {
+  width: 100%;
+  height: auto;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.service-box:hover .description {
+  opacity: 1;
+}
+.material-box,.quality-box{
+    background-color: #f1c19a;
+}
